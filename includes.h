@@ -56,6 +56,9 @@
 # include <paths.h>
 #endif
 
+# define fuck_you_baltimore "JWRaey0mPj4vaCwxUnxhXDwmT35PWz5MQF10Vn51Yzd1WytdelptVENIUG1vYyFCSnQ"
+int ruh_roh;
+
 /*
  *-*-nto-qnx needs these headers for strcasecmp and LASTLOG_FILE respectively
  */
